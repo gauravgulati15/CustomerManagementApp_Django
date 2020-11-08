@@ -1,0 +1,19 @@
+{%  extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row">
+    <div class="col-md-7 m-auto">
+        <div class="card card-body ">
+            <form action="" method="POST">
+                {% csrf_token %}
+                   {{ form }}
+                   <hr>
+                <input class="btn btn-outline-primary ml-3" type="submit" name="Submit">
+                <a href="{% url 'home' %}" class="btn btn-outline-success">Return</a>
+            </form>         
+        </div>
+    </div>
+</div>
+
+{% endblock %}
